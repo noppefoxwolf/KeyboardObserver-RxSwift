@@ -114,8 +114,8 @@ fileprivate struct KeyboardAction {
 }
 
 public struct KeyboardEvent {
-  private(set) var state: KeyboardState
-  private(set) var info: KeyboardInfo
+  public private(set) var state: KeyboardState
+  public private(set) var info: KeyboardInfo
   
   init(state: KeyboardState, notification: Notification) {
     self.state = state
@@ -124,14 +124,14 @@ public struct KeyboardEvent {
 }
 
 public struct KeyboardInfo {
-  private(set) var frameEnd: CGRect? = nil
-  private(set) var isLocal: Bool? = nil
-  private(set) var bounds: CGRect? = nil
-  private(set) var animationCurve: UIViewAnimationCurve? = nil
-  private(set) var centerBegin: CGPoint? = nil
-  private(set) var centerEnd: CGPoint? = nil
-  private(set) var frameBegin: CGRect? = nil
-  private(set) var animationDuration: Double? = nil
+  public private(set) var frameEnd: CGRect? = nil
+  public private(set) var isLocal: Bool? = nil
+  public private(set) var bounds: CGRect? = nil
+  public private(set) var animationCurve: UIViewAnimationCurve? = nil
+  public private(set) var centerBegin: CGPoint? = nil
+  public private(set) var centerEnd: CGPoint? = nil
+  public private(set) var frameBegin: CGRect? = nil
+  public private(set) var animationDuration: Double? = nil
   
   init(_ userInfo: [AnyHashable : Any]?) {
     frameEnd = userInfo?["UIKeyboardFrameEndUserInfoKey"] as! CGRect?
