@@ -7,18 +7,33 @@
 //
 
 import UIKit
+import KeyboardObserver_RxSwift
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+  //private let disposeBag = DisposeBag()
+  private var keyboardObserver = KeyboardObserver()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+//    subscribe
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//    keyboardObserver.rx_event.subscribe(onNext: { (event) in
+//      print(event.state)
+//      print(event.info)
+//    }).addDisposableTo(disposeBag)
+    
+    //method handler
+    keyboardObserver.willHide { (event) in
+      print("willhide")
+    }.didHide { (event) in
+      print("didHide")
+    }.willShow { (event) in
+      print("willshow")
+    }.didShow { (eevnt) in
+      print("ddidshow")
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+  }
 }
 

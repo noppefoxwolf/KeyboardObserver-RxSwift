@@ -1,3 +1,5 @@
+platform :ios, '9.0'
+swift_version = '3.0'
 use_frameworks!
 
 target 'KeyboardObserver-RxSwift_Example' do
@@ -5,7 +7,5 @@ target 'KeyboardObserver-RxSwift_Example' do
 
   target 'KeyboardObserver-RxSwift_Tests' do
     inherit! :search_paths
-
-    
   end
 end
