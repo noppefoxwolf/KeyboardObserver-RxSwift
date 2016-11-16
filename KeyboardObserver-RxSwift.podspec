@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'KeyboardObserver-RxSwift'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Keyboard event handler with rxswift.'
 
   s.description      = <<-DESC
