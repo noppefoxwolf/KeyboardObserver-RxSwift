@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'KeyboardObserver-RxSwift_Example' do
+  pod 'KeyboardObserver-RxSwift', :path => '../'
+
+  target 'KeyboardObserver-RxSwift_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
